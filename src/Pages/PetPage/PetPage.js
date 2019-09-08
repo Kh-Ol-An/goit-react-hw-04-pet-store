@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import pets from '../../components/pets.json';
 import Pet from '../Pet/Pet';
 
 const getIdFromProps = props => props.match.params.id;
 
 export default class PetPage extends Component {
+  static propTypes = {
+    history: PropTypes.shape().isRequired,
+  };
+
   state = {
     pet: {},
   };
@@ -15,6 +20,11 @@ export default class PetPage extends Component {
       pet: pets.find(pet => id === pet.id),
     });
   }
+
+  handleGoBack = () => {
+    const { history } = this.props;
+    history.push('/pets');
+  };
 
   render() {
     const { pet } = this.state;
@@ -29,6 +39,7 @@ export default class PetPage extends Component {
             color={pet.color}
             image={pet.image}
             description={pet.description}
+            goBack={this.handleGoBack}
           />
         )}
       </>

@@ -15,7 +15,7 @@
 }
 
 .btn::before {
-  content: "\2B05";
+  content: '\2B05';
   display: inline-block;
   margin-right: 10px;
   font-size: 18px;

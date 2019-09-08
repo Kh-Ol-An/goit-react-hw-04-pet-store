@@ -1,16 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import s from './Pet.module.css';
 
-const Pet = ({ name, age, breed, gender, color, image, description }) => {
+const Pet = ({
+  name,
+  age,
+  breed,
+  gender,
+  color,
+  image,
+  description,
+  goBack,
+}) => {
   return (
     <li className={s.item}>
-      <Link to="/pets">
-        <button type="button" className={s.btn}>
-          Return
-        </button>
-      </Link>
+      <button type="button" onClick={goBack} className={s.btn}>
+        Return
+      </button>
       <h2>All about {name}</h2>
       <div className={s.box}>
         <img src={image} alt={name} width="320" />
@@ -26,14 +32,25 @@ const Pet = ({ name, age, breed, gender, color, image, description }) => {
   );
 };
 
+Pet.defaultProps = {
+  name: '',
+  age: null,
+  breed: '',
+  gender: '',
+  color: '',
+  image: '',
+  description: '',
+};
+
 Pet.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
-  breed: PropTypes.string.isRequired,
-  gender: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  age: PropTypes.number,
+  breed: PropTypes.string,
+  gender: PropTypes.string,
+  color: PropTypes.string,
+  image: PropTypes.string,
+  description: PropTypes.string,
+  goBack: PropTypes.func.isRequired,
 };
 
 export default Pet;
