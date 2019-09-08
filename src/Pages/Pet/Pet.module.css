@@ -1,0 +1,30 @@
+.item {
+  list-style: none;
+  padding: 35px;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #464646;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn::before {
+  content: "\2B05";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.box {
+  display: flex;
+}
+
+.param {
+  margin-left: 20px;
+}
