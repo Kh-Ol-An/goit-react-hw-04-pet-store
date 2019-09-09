@@ -23,6 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://kh-ol-an.github.io/goit-react-hw-04-pet-store",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -49,6 +50,5 @@
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2"
-  },
-  "homepage": "https://kh-ol-an.github.io/goit-react-hw-04-pet-store/"
+  }
 }
