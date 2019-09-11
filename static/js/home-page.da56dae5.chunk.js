@@ -1,0 +1,2 @@
+(window["webpackJsonpgoit-react-hw-02-bank-account"]=window["webpackJsonpgoit-react-hw-02-bank-account"]||[]).push([[1],{39:function(t,e,n){t.exports={title:"HomePage_title__g7Xjw"}},43:function(t,e,n){"use strict";n.r(e);var a=n(0),o=n.n(a),c=n(39),i=n.n(c);e.default=function(){return o.a.createElement("h1",{className:i.a.title},"Welcome to Paws online store")}}}]);
+//# sourceMappingURL=home-page.da56dae5.chunk.js.map
